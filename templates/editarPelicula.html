@@ -1,0 +1,64 @@
+<form id="frmAltaPelicula" name="frmAltaPelicula" method=post>
+  <input type="hidden" name="action" value="Pelicula::editPel">
+
+  <table align="center" border="0" cellpadding="3" cellspacing="0" width="90%">
+
+
+    <tr>
+      <th class="title" colspan="4" align="center">Editar Película</th>
+    </tr>
+
+    <tr><td><br /></td></tr>
+
+    <tr>
+      <th align="right" width="35%">Nombre: </th>
+      <td align="left"><input type="text" name="nombrePelicula" id="nombrePelicula" size="50" maxlength="150" value="{titulo}"></td>
+    </tr>
+
+    <tr>
+      <th align="right" width="35%">G&eacute;nero: </th>
+      <td align="left">
+        <select name="genero" id="genero">
+          <option value="{genero_ac}">{genero_ac}</option>
+          <!-- START BLOCK : GENEROS -->
+          <option value="{genero}">{genero}</option>
+          <!-- END BLOCK : GENEROS -->
+        </select>
+      </td>
+    </tr>
+
+    <tr>
+      <th align="right" width="35%">Director: </th>
+      <td align="left">
+        <select name="director" id="director">
+          <option value="{director_ac}">{director_ac}</option>
+          <!-- START BLOCK : DIRECTORES -->
+          <option value="{director}">{director}</option>
+          <!-- END BLOCK : DIRECTORES -->
+        </select>
+      </td>
+    </tr>
+
+    <tr>
+      <th align="right" width="35%">Duraci&oacute;n: </th>
+      <td align="left"><input type="text" name="duracion" id="duracion" value="{duracion}"></td>
+    </tr>
+
+    <tr>
+      <th align="right" width="35%">Fecha de estreno: </th>
+      <td align="left"><input type="date" name="fechaEstreno" id="fechaEstreno" value="{fechaEstreno}"></td>
+    </tr>
+
+
+    <tr><td><br /></td></tr>
+    <tr>
+      <td colspan="2" align="center">
+        <input type="hidden" name="idPel" id="idPel" value="{id}">
+        <input type="button" onclick="location.href='index.php?action=Pelicula::listadoPeliculas'" value="  Volver  ">
+        <input type="submit" onclick="location.href='index.php?action=Pelicula::listadoPeliculas'" value="  Guardar  ">
+      </td>
+    </tr>
+    <tr><td><br /></td></tr>
+
+  </table>
+</form>

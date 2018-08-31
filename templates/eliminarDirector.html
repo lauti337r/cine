@@ -1,0 +1,36 @@
+<form id="frmrelActPel" name="frmrelActPel" method=post>
+  <input type="hidden" name="action" value="Pelicula::elimDirector">
+
+  <table align="center" border="0" cellpadding="3" cellspacing="0" width="90%">
+
+
+    <tr>
+      <th class="title" colspan="4" align="center">Eliminar director</th>
+    </tr>
+
+    <tr><td><br/></td></tr>
+
+    <tr>
+      <th align="right" width="35%">Director: </th>
+      <td align="left">
+        <select name="director" id="director">
+          <option value="noSelect">-----</option>
+          <!-- START BLOCK : DIRECTORES -->
+          <option value="{id_director}">{director}</option>
+          <!-- END BLOCK : DIRECTORES -->
+        </select>
+      </td>
+    </tr>
+
+    <tr><td><br /></td></tr>
+    <tr>
+      <td colspan="2" align="center">
+        <font size="2px" color="red"><b>NOTA: AL ELIMINAR UN DIRECTOR SE ELIMINARAN<br>TODAS LAS PELICULAS DEL MISMO DIRECTOR</b></font><br>
+        <input type="button" onclick="location.href='index.php?action=Ingreso::main'" value="  Volver  ">
+        <input type="submit" onclick="location.href='index.php?action=Ingreso::main'" value="  Eliminar director  ">
+      </td>
+    </tr>
+    <tr><td><br /></td></tr>
+
+  </table>
+</form>

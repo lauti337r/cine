@@ -1,0 +1,35 @@
+<form id="frmrelActPel" name="frmrelActPel" method=post>
+  <input type="hidden" name="action" value="Pelicula::elimActor">
+
+  <table align="center" border="0" cellpadding="3" cellspacing="0" width="90%">
+
+
+    <tr>
+      <th class="title" colspan="4" align="center">Eliminar actor</th>
+    </tr>
+
+    <tr><td><br /></td></tr>
+
+    <tr>
+      <th align="right" width="35%">Actor: </th>
+      <td align="left">
+        <select name="actor" id="actor">
+          <option value="noSelect">-----</option>
+          <!-- START BLOCK : ACTORES -->
+          <option value="{id_actor}">{actor}</option>
+          <!-- END BLOCK : ACTORES -->
+        </select>
+      </td>
+    </tr> 
+
+    <tr><td><br /></td></tr>
+    <tr>
+      <td colspan="2" align="center">
+        <input type="button" onclick="location.href='index.php?action=Ingreso::main'" value="  Volver  ">
+        <input type="submit" onclick="location.href='index.php?action=Ingreso::main'" value="  Eliminar actor  ">
+      </td>
+    </tr>
+    <tr><td><br /></td></tr>
+
+  </table>
+</form>
